@@ -1,6 +1,43 @@
 {
   "project": {
-    "pz": {},
+    "pz": {
+      "agg": {
+        "frequentVisitor": {
+          "inputs": [
+            {
+              "dim": "frequentpageviews"
+            }
+          ]
+        },
+        "frequentViewer": {
+          "inputs": [
+            {
+              "dim": "frequentVisitor"
+            }
+          ]
+        }
+      },
+      "sig": {
+        "frequentpageviews": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "PVC",
+                "match": {
+                  "op": "=",
+                  "rhs": 5
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
     "test": {}
   }
 }
