@@ -37,7 +37,7 @@ import './Review';
 import './RichText';
 import './Spacer';
 import './Testimonial';
-import './Video'; 
+import './Video';
 import './VideoPlayer';
 
 export { default as Accordion } from './Accordion';
@@ -104,5 +104,5 @@ export { default as RichText } from './RichText';
 
 export { default as Video } from './Video';
 export type { VideoProps } from './Video';
-export { default as VideoPlayer } from './VideoPlayer'
-export type { VideoPlayerProps } from './VideoPlayer'
+export { default as VideoPlayer } from './VideoPlayer';
+export type { VideoPlayerProps } from './VideoPlayer';
