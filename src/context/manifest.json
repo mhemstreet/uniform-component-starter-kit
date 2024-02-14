@@ -15,6 +15,13 @@
               "dim": "frequentVisitor"
             }
           ]
+        },
+        "usVisitors": {
+          "inputs": [
+            {
+              "dim": "ususers"
+            }
+          ]
         }
       },
       "sig": {
@@ -31,6 +38,26 @@
                 "match": {
                   "op": "=",
                   "rhs": 5
+                }
+              }
+            ]
+          }
+        },
+        "ususers": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "key": "vc-country",
+                "type": "QK",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "us"
                 }
               }
             ]
