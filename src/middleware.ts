@@ -8,7 +8,7 @@ import {
 } from "@uniformdev/context";
 import { createUniformEdgeMiddleware } from "@uniformdev/context-edge-vercel";
 import manifest from "./context/manifest.json";
-import { Cookie } from "next/font/google";
+//import { Cookie } from "next/font/google";
 export const config = {
   matcher: [
     /*
