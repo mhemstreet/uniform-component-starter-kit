@@ -4,7 +4,7 @@ import {
   ManifestV2,
   ContextPlugin,
   enableDebugConsoleLogDrain,
-  enableContextDevTools,
+  enableContextDevTools
 } from '@uniformdev/context';
 import { NextCookieTransitionDataStore } from '@uniformdev/context-next';
 

@@ -95,7 +95,7 @@ const App = ({
         <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} />
         {favicon?.value && <link rel="shortcut icon" href={favicon?.value as string} />}
       </Head>
-      <UniformContext context={serverUniformContext ?? clientContext}>
+      <UniformContext outputType="edge" context={serverUniformContext ?? clientContext}>
         <Component {...pageProps} />
       </UniformContext>
     </>
