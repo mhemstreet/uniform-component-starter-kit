@@ -37,6 +37,10 @@ export const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => 
           <div className={classNames('hidden lg:flex w-full', getLinksAlignment(linksAlignment))}>
             <ul className="menu menu-horizontal px-1 shrink-0">
               <UniformSlot name="links" />
+              <li>
+              <span key="en-us"><Link href="/" locale="en-us">English</Link></span>
+              <span key="es-es"><Link href="/es-es" locale="es-es">Espanol</Link></span>
+              </li>
             </ul>
           </div>
         </div>
