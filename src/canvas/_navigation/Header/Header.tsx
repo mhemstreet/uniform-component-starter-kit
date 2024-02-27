@@ -39,7 +39,7 @@ export const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => 
               <UniformSlot name="links" />
               <li>
               <span key="en-us"><Link href="/" locale="en-us">English</Link></span>
-              <span key="es-es"><Link href="/es-es" locale="es-es">Espanol</Link></span>
+              <span key="es-es"><Link href="/es-es" locale="es-es">Español</Link></span>
               </li>
             </ul>
           </div>
