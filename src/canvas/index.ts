@@ -39,6 +39,7 @@ import './Spacer';
 import './Testimonial';
 import './Video';
 import './VideoPlayer';
+import './Algolia';
 
 export { default as Accordion } from './Accordion';
 

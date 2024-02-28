@@ -13,6 +13,10 @@ const nextConfig = {
   i18n: {
     locales: ['en-us', 'es-es'],
     defaultLocale: 'en-us',
+  },
+  publicRuntimeConfig: {
+    applicationId: process.env.ALGOLIA_APPLICATION_ID,
+    algoliaApiKey: process.env.ALGOLIA_API_KEY,
   }
 };
 

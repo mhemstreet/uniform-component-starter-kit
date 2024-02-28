@@ -5,6 +5,7 @@ module.exports = {
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
     'prettier/prettier': 'off',
     'no-underscore-dangle': 'off',
     'import/no-anonymous-default-export': [

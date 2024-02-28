@@ -1,64 +1,84 @@
 {
   "project": {
     "pz": {
-      "agg": {
-        "frequentVisitor": {
-          "inputs": [
-            {
-              "dim": "frequentpageviews"
-            }
-          ]
-        },
-        "frequentViewer": {
-          "inputs": [
-            {
-              "dim": "frequentVisitor"
-            }
-          ]
-        },
-        "usVisitors": {
-          "inputs": [
-            {
-              "dim": "ususers"
-            }
-          ]
+      "enr": {
+        "1": {
+          "cap": 100
         }
       },
       "sig": {
-        "frequentpageviews": {
-          "str": 50,
-          "cap": 100,
-          "dur": "p",
+        "iemLanding": {
+          "str": 5,
+          "cap": 1000,
+          "dur": "s",
           "crit": {
             "op": "&",
             "type": "G",
             "clauses": [
               {
-                "type": "PVC",
-                "match": {
-                  "op": "=",
-                  "rhs": 5
-                }
+                "path": {
+                  "cs": false,
+                  "op": "~",
+                  "rhs": "/headphones/iem"
+                },
+                "type": "PV"
               }
             ]
           }
         },
-        "ususers": {
-          "str": 50,
-          "cap": 100,
-          "dur": "p",
+        "onEarLanding": {
+          "str": 5,
+          "cap": 1000,
+          "dur": "s",
           "crit": {
             "op": "&",
             "type": "G",
             "clauses": [
               {
-                "key": "vc-country",
-                "type": "QK",
-                "match": {
+                "path": {
                   "cs": false,
-                  "op": "=",
-                  "rhs": "us"
-                }
+                  "op": "~",
+                  "rhs": "/headphones/on-the-ear"
+                },
+                "type": "PV"
+              }
+            ]
+          }
+        },
+        "overtheear": {
+          "str": 5,
+          "cap": 1000,
+          "dur": "s",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "path": {
+                  "cs": false,
+                  "op": "~",
+                  "rhs": "/headphones/over-the-ear"
+                },
+                "type": "PV"
+              }
+            ]
+          }
+        },
+        "wirelessLanding": {
+          "str": 5,
+          "cap": 1000,
+          "dur": "s",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "path": {
+                  "cs": false,
+                  "op": "~",
+                  "rhs": "/headphones/wireless"
+                },
+                "type": "PV"
               }
             ]
           }
