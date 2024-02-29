@@ -55,9 +55,9 @@ const CanvasRefinementList = ({ refinementListParams }: ComponentProps<CanvasRef
     return <ErrorPropertyCallout title="Property 'attribute' was not defined for RefinementList component." />;
   }
 
-  let attribute = refinementListProps?.attribute;
+  const attribute = refinementListProps?.attribute;
 
-  let attributeDisplay = getAttributeDisplayName(attribute);
+  const attributeDisplay = getAttributeDisplayName(attribute);
 
   const { allowedIndex, ...props } = refinementListProps;
 
