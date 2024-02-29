@@ -36,7 +36,7 @@ function getAttributeDisplayName (attribute: string) {
          result = 'Features';
          break;
       case 'fields.heaphoneType.es-ES':
-          result = 'Tipo de auriculares.';
+          result = 'Tipo de auriculares';
           break;
       case 'fields.heaphoneType.en-US':
           result = 'Headphone Type';
