@@ -31,7 +31,7 @@ const CanvasRefinementList = ({ refinementListParams }: ComponentProps<CanvasRef
   return (
     <div className="refinementList">
       <span>
-        Search results are filtered by the following attribute: <code>{refinementListProps?.attribute}</code>
+        <code>{refinementListProps?.attribute}</code>
       </span>
       <RefinementList {...props} />
     </div>

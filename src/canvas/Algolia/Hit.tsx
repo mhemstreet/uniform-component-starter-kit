@@ -23,10 +23,20 @@ type HitComponent = {
 
 const Hit = ({ hit }: { hit: HitComponent }) => {
   const { objectID = 'unknown', ...properties } = hit || {};
+  const url = window.location.href;
+  const regex = /^https?:\/\/[^\/]+\/([a-z]{2}-[a-z]{2})\/[a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]+$/;
+  const match = url.match(regex);
+  let localeCode = 'en-US';
 
+  if (match) {
+      const middlePart = match[1];
+      const parts = middlePart.split("-");
+      const uppercasedMiddlePart = parts[0] + "-" + parts[1].toUpperCase();
+     localeCode = uppercasedMiddlePart; 
+  }
   return (
     <div>
-      <h3>{properties.fields.headphoneName["en-US"]}</h3>
+      <a href={'/en-us/headphones/' + properties.fields.slug["en-US"]}><h3>{properties.fields.headphoneName[localeCode]}</h3></a>
     </div>
   );
 };
