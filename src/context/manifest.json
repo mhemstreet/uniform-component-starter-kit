@@ -1,6 +1,48 @@
 {
   "project": {
     "pz": {
+      "agg": {
+        "overTheEarIntent": {
+          "inputs": [
+            {
+              "dim": "overtheear"
+            },
+            {
+              "dim": "overTheEarQuerystring"
+            }
+          ]
+        },
+        "onEarIntent": {
+          "inputs": [
+            {
+              "dim": "onEarLanding"
+            },
+            {
+              "dim": "onEarQuerystring"
+            }
+          ]
+        },
+        "iemIntent": {
+          "inputs": [
+            {
+              "dim": "iemLanding"
+            },
+            {
+              "dim": "iemQuerystring"
+            }
+          ]
+        },
+        "wirelessIntent": {
+          "inputs": [
+            {
+              "dim": "wirelessLanding"
+            },
+            {
+              "dim": "wirelessQuerystring"
+            }
+          ]
+        }
+      },
       "enr": {
         "1": {
           "cap": 100
@@ -8,7 +50,7 @@
       },
       "sig": {
         "iemLanding": {
-          "str": 5,
+          "str": 1,
           "cap": 1000,
           "dur": "s",
           "crit": {
@@ -26,8 +68,28 @@
             ]
           }
         },
+        "iemQuerystring": {
+          "str": 2,
+          "cap": 1000,
+          "dur": "s",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "IEM"
+                },
+                "queryName": "t"
+              }
+            ]
+          }
+        },
         "onEarLanding": {
-          "str": 5,
+          "str": 1,
           "cap": 1000,
           "dur": "s",
           "crit": {
@@ -45,8 +107,28 @@
             ]
           }
         },
+        "onEarQuerystring": {
+          "str": 2,
+          "cap": 1000,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "On the ear"
+                },
+                "queryName": "t"
+              }
+            ]
+          }
+        },
         "overtheear": {
-          "str": 5,
+          "str": 1,
           "cap": 1000,
           "dur": "s",
           "crit": {
@@ -64,8 +146,28 @@
             ]
           }
         },
+        "overTheEarQuerystring": {
+          "str": 2,
+          "cap": 1000,
+          "dur": "s",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "Over the ear"
+                },
+                "queryName": "t"
+              }
+            ]
+          }
+        },
         "wirelessLanding": {
-          "str": 5,
+          "str": 1,
           "cap": 1000,
           "dur": "s",
           "crit": {
@@ -79,6 +181,26 @@
                   "rhs": "/headphones/wireless"
                 },
                 "type": "PV"
+              }
+            ]
+          }
+        },
+        "wirelessQuerystring": {
+          "str": 2,
+          "cap": 1000,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "Wireless"
+                },
+                "queryName": "t"
               }
             ]
           }
