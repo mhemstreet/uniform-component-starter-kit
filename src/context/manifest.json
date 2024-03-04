@@ -105,7 +105,7 @@
         "onEarQuerystring": {
           "str": 2,
           "cap": 1000,
-          "dur": "p",
+          "dur": "s",
           "crit": {
             "op": "&",
             "type": "G",
@@ -183,7 +183,7 @@
         "wirelessQuerystring": {
           "str": 2,
           "cap": 1000,
-          "dur": "p",
+          "dur": "s",
           "crit": {
             "op": "&",
             "type": "G",
