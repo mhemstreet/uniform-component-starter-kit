@@ -48,7 +48,7 @@ const Hit = ({ hit }: { hit: HitComponent }) => {
 
   return (
     <div>
-      <a href={'/' + localeCode.toLowerCase() + '/headphones/' + properties.fields.slug['en-US']}><h3><strong>{properties.fields.headphoneName[localeCode]}</strong></h3></a>
+      <a href={'/' + localeCode.toLowerCase() + '/headphones/' + properties.fields.slug['en-US'] + '?t=' + properties.fields.headphoneQueryType["en-US"]}><h3><strong>{properties.fields.headphoneName[localeCode]}</strong></h3></a>
       <p>{description}</p>
     </div>
   );
